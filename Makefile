@@ -1,8 +1,8 @@
 #Makefile
-all: programa
-programa: programa.o
-    ld -o $@ $+
-programa.o: programa.s
-    as -g -mfpu=vfpv2 -o  $@ $+
+all: Hola64
+Hola64: Hola64.o
+	ld -o $@ $+
+Hola.o: Hola64.s
+	as -g -mfpu=vfpv2 -o  $@ $+
 clean:
-    rm -vf programa *.o
+	rm -vf Hola64 *.o
